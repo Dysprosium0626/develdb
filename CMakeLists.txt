@@ -20,7 +20,7 @@ include_directories(
 )
 include_directories(BEFORE db) # This is needed for gtest.
 
-add_library(develdb "")
+add_library(develdb "" util/arena.hpp util/arena.cpp)
 target_sources(develdb
         PRIVATE
         "${PROJECT_SOURCE_DIR}/db/skiplist_test.cc"
